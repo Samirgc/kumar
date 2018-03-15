@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:App9"
              x:Class="App9.MainPage">
 
-	<Label Text="Welcome to Xamarin.Forms!ok" 
+	<Label Text="Welcome to Xamarin.Forms!okright" 
            VerticalOptions="Center" 
            HorizontalOptions="Center" />
 
