@@ -6,7 +6,12 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 namespace App9.Droid
 {
     [Activity(Label = "App9", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
@@ -18,7 +23,9 @@ namespace App9.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
-
+            AppCenter.Start("b80eeb85-5de5-415b-8c99-3fee1e27514e",
+                   typeof(Analytics), typeof(Crashes));
+            AppCenter.Start("b80eeb85-5de5-415b-8c99-3fee1e27514e", typeof(Analytics), typeof(Crashes));
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
         }
